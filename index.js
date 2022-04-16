@@ -5,6 +5,7 @@ let urlForImage =
 let imageData = [];
 const imageContainer = document.querySelector("#image_list");
 const loading = document.querySelector("#loading-State");
+const navBar = document.querySelector(".nav_bar");
 async function getImage() {
   imageData = [];
   let result = await fetch(urlForImage).then((result) => result.json());
@@ -81,8 +82,16 @@ window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
   let innerHeight = window.innerHeight;
   let scrollHeight = document.documentElement.scrollHeight;
+  //   console.log(scrollTop);
+  if (scrollTop >= 350) {
+    // console.log("okay nav");
+    navBar.style.backgroundColor = "#181d44";
+  } else {
+    navBar.style.backgroundColor = "transparent";
+  }
 
   if (scrollTop + innerHeight >= scrollHeight) {
+    // console.log("recall");
     getImage();
   }
 });

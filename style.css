@@ -19,10 +19,11 @@
   gap: 20px;
   place-content: space-around;
   text-align: center;
-  position: sticky;
+  position: fixed;
   /* background-color: #181d44; */
   padding: 8px 10px;
   /* padding: 0 10px; */
+  z-index: 1000;
 }
 .nav_left {
   display: flex;
@@ -128,6 +129,9 @@ input[type="text"]:active {
 /* text-and-flex */
 .text-and-flex {
   text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 60px;
 }
 .heading {
   color: #aed8ea;
@@ -167,7 +171,21 @@ input[type="text"]:active {
   width: 110px;
   height: 150px;
   margin-right: 9px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  top: 0;
+  transition: top 300ms ease-in-out;
+}
+
+.box:hover {
+  position: relative;
+  top: -5px;
+  /* transition: top 300ms ease-in-out; */
+}
+
+.box-small-div {
+  height: 40%;
+  background-color: #5b62a5;
+  margin-top: -4px;
 }
 
 .second_top {
