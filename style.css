@@ -183,11 +183,10 @@ input[type="text"]:active {
 .categories {
   margin-top: 20px;
   display: flex;
+  flex-wrap: no-wrap;
   justify-content: space-between;
 }
-/* .categories :first-child {
-  flex-grow: 4;
-} */
+
 .box {
   width: 110px;
   height: 150px;
@@ -287,17 +286,26 @@ input[type="text"]:active {
   .imagesList {
     column-count: 4;
   }
+  .box:nth-child(3n) {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1030px) {
   .imagesList {
     column-count: 3;
   }
+  .box:nth-child(3n + 1) {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 780px) {
   .imagesList {
     column-count: 2;
+  }
+  .box:nth-child(even) {
+    display: none;
   }
 }
 
