@@ -85,6 +85,27 @@ input[type="text"]:active {
   /* flex-grow: 0; */
 }
 
+/* Suggestion */
+.suggestion-container {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  top: 14%;
+  left: -2%;
+  /* margin-top: 10px; */
+  z-index: 10000;
+  display: none;
+}
+.suggestion-div {
+  width: 85%;
+  max-width: 530px;
+  height: 100px;
+  margin: auto;
+  border-radius: 2px;
+  background-color: #3c424b;
+  border-top: 1px solid black;
+}
+
 .add_free {
   background: #6d7cf9;
   box-shadow: 0 3px 4px rgb(0 0 0 / 12%);
@@ -183,7 +204,7 @@ input[type="text"]:active {
 }
 
 .box-small-div {
-  height: 40%;
+  height: 80px;
   background-color: #5b62a5;
   margin-top: -4px;
 }
@@ -212,6 +233,14 @@ input[type="text"]:active {
   margin-top: 1.2rem;
 }
 
+.image-box-div {
+  top: 0;
+  transition: top 300ms ease;
+}
+.image-box-div:hover {
+  position: relative;
+  top: 7px;
+}
 .innerDiv_name_div {
   color: #fff;
   padding-top: 1rem;

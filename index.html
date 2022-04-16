@@ -42,7 +42,12 @@
             <div class="nav_center">
               <!-- <div> -->
               <form action="" class="form_search">
-                <input type="text" placeholder="Images, #tags oh my!" , />
+                <input
+                  type="text"
+                  placeholder="Images, #tags oh my!"
+                  value=""
+                  class="form_search_input"
+                />
                 <button type="submit" class="submit_search">
                   <img
                     src="https://s.imgur.com/desktop-assets/desktop-assets/icon-search.8d0f9b564a4659d48d8eca38b968a7f2.svg"
@@ -50,6 +55,9 @@
                   />
                 </button>
               </form>
+
+              <!-- <div class="suggestion-div"></div> -->
+
               <!-- </div> -->
             </div>
             <div class="nav_right">
@@ -58,6 +66,17 @@
               <button class="sign_up button">Sign Up</button>
             </div>
           </div>
+
+          <!-- Search Suggestion -->
+          <!-- <div class="suggestion-container">
+            <div class="suggestion-div">
+              <ul>
+                <li>Canada</li>
+                <li>America</li>
+              </ul>
+            </div>
+          </div> -->
+
           <div class="text-and-flex">
             <p class="heading">
               Wait, it's all memes? Always has been. EXPLORE TAGS .
@@ -69,7 +88,11 @@
                 <p class="tag_name">MORE TAGS +</p>
               </div>
               <div class="categories">
-                <div class="box" style="flex-grow: 0.4">
+                <div
+                  class="box"
+                  style="flex-grow: 0.4"
+                  onclick="getCountry('america')"
+                >
                   <img
                     style="width: 100%; height: 60%"
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
@@ -77,9 +100,17 @@
                   />
                   <div class="box-small-div">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      America
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                        padding-bottom: 10px;
+                      "
+                    >
+                      5115415 Posts
+                    </p>
                   </div>
                 </div>
                 <div class="box">
@@ -88,14 +119,22 @@
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
                     alt=""
                   />
-                  <div class="box-small-div">
+                  <div class="box-small-div" onclick="getCountry(canada)">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      Canada
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                        padding-bottom: 10px;
+                      "
+                    >
+                      51155 Posts
+                    </p>
                   </div>
                 </div>
-                <div class="box">
+                <div class="box" onclick="getCountry('brazil')">
                   <img
                     style="width: 100%; height: 60%"
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
@@ -103,12 +142,19 @@
                   />
                   <div class="box-small-div">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      Brazil
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                      "
+                    >
+                      5115415 Posts
+                    </p>
                   </div>
                 </div>
-                <div class="box">
+                <div class="box" onclick="getCountry('china')">
                   <img
                     style="width: 100%; height: 60%"
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
@@ -116,12 +162,19 @@
                   />
                   <div class="box-small-div">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      China
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                      "
+                    >
+                      5115415 Posts
+                    </p>
                   </div>
                 </div>
-                <div class="box">
+                <div class="box" onclick="getCountry('india')">
                   <img
                     style="width: 100%; height: 60%"
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
@@ -129,12 +182,19 @@
                   />
                   <div class="box-small-div">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      India
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                      "
+                    >
+                      7115105 Posts
+                    </p>
                   </div>
                 </div>
-                <div class="box">
+                <div class="box" onclick="getCountry('pakistan')">
                   <img
                     style="width: 100%; height: 60%"
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
@@ -142,12 +202,19 @@
                   />
                   <div class="box-small-div">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      Pakistan
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                      "
+                    >
+                      415 Posts
+                    </p>
                   </div>
                 </div>
-                <div class="box">
+                <div class="box" onclick="getCountry('nepal')">
                   <img
                     style="width: 100%; height: 60%"
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
@@ -155,12 +222,19 @@
                   />
                   <div class="box-small-div">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      Nepal
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                      "
+                    >
+                      15415 Posts
+                    </p>
                   </div>
                 </div>
-                <div class="box">
+                <div class="box" onclick="getCountry('bangladesh')">
                   <img
                     style="width: 100%; height: 60%"
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
@@ -168,12 +242,19 @@
                   />
                   <div class="box-small-div">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      Bangladesh
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                      "
+                    >
+                      5115415 Posts
+                    </p>
                   </div>
                 </div>
-                <div class="box">
+                <div class="box" onclick="getCountry('games')">
                   <img
                     style="width: 100%; height: 60%"
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
@@ -181,12 +262,19 @@
                   />
                   <div class="box-small-div">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      Games
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                      "
+                    >
+                      5115415 Posts
+                    </p>
                   </div>
                 </div>
-                <div class="box">
+                <div class="box" onclick="getCountry('meme')">
                   <img
                     style="width: 100%; height: 60%"
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
@@ -194,12 +282,19 @@
                   />
                   <div class="box-small-div">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      Memes
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                      "
+                    >
+                      5115415 Posts
+                    </p>
                   </div>
                 </div>
-                <div class="box">
+                <div class="box" onclick="getCountry('football')">
                   <img
                     style="width: 100%; height: 60%"
                     src="https://i.imgur.com/f8B0kEw_d.jpg?maxwidth=800&shape=thumb&fidelity=high"
@@ -207,9 +302,16 @@
                   />
                   <div class="box-small-div">
                     <p class="p_name" style="color: white; padding-top: 5px">
-                      Name
+                      Football
                     </p>
-                    <p style="color: hsla(0, 0%, 100%, 0.5)">5115415 Posts</p>
+                    <p
+                      style="
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding-bottom: 10px;
+                      "
+                    >
+                      5115415 Posts
+                    </p>
                   </div>
                 </div>
               </div>

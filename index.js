@@ -6,6 +6,16 @@ let imageData = [];
 const imageContainer = document.querySelector("#image_list");
 const loading = document.querySelector("#loading-State");
 const navBar = document.querySelector(".nav_bar");
+const form = document.querySelector(".form_search_input");
+const button = document.querySelector(".submit_search");
+
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  // console.log(form.value);
+  getCountry(form.value);
+  form.value = "";
+});
+
 async function getImage() {
   imageData = [];
   let result = await fetch(urlForImage).then((result) => result.json());
@@ -29,8 +39,9 @@ function appendData(data) {
   let div = document.createElement("div");
   //   div.style.height = "100%";
   div.style.width = "200px";
-  div.style.boxShadow = "0 8px 16px 0 rgb(0 0 0 / 16%";
+  div.style.boxShadow = "0 8px 16px 0 rgb(0 0 0 / 16%)";
   div.style.marginBottom = "15px";
+  div.className = "image-box-div";
 
   let image = document.createElement("img");
   image.src = data.user.profile_image.large;
@@ -40,7 +51,7 @@ function appendData(data) {
   innerDiv.className = "innerDiv_name_div";
 
   let p = document.createElement("p");
-  p.innerText = `${data.user.first_name} ${data.user.last_name}`;
+  p.innerText = `${data.user.first_name} ${data.user.last_name || ""}`;
   p.className = "p_name";
 
   let divLAst = document.createElement("div");
@@ -52,7 +63,7 @@ function appendData(data) {
   iconDownload.innerHTML =
     '<i class="fa fa-download" style="font-size=100px"></i>';
   let download = document.createElement("p");
-  download.innerText = data.downloads;
+  download.innerText = data.downloads || 0;
   downloadDiv.append(iconDownload, download);
 
   let likeDiv = document.createElement("div");
@@ -60,7 +71,7 @@ function appendData(data) {
   let iconLike = document.createElement("p");
   iconLike.innerHTML = '<i class="fa fa-heart" style="font-size=100px"></i>';
   let like = document.createElement("p");
-  like.innerText = data.likes;
+  like.innerText = data.likes || 0;
   likeDiv.append(iconLike, like);
 
   let viewDiv = document.createElement("div");
@@ -68,7 +79,7 @@ function appendData(data) {
   let iconView = document.createElement("p");
   iconView.innerHTML = '<i class="fa fa-eye" style="font-size=100px"></i>';
   let view = document.createElement("p");
-  view.innerText = data.views;
+  view.innerText = data.views || 0;
   viewDiv.append(iconView, view);
 
   divLAst.append(downloadDiv, likeDiv, viewDiv);
@@ -96,4 +107,28 @@ window.addEventListener("scroll", () => {
   }
 });
 
+function showSuggestion() {
+  const suggestion = document.querySelector(".suggestion-container");
+  suggestion.style.display = "block";
+}
+function hideSuggestion() {
+  const suggestion = document.querySelector(".suggestion-container");
+  suggestion.style.display = "none";
+}
+
+async function getCountry(name) {
+  imageData = [];
+  imageContainer.innerHTML = null;
+  let result = await fetch(
+    `https://api.unsplash.com/search/photos?query=${name}&client_id=Hk3Ab_ZYrvm7wRHoZCJhyb9j_vJOdO-815ADdt25Kz0`
+  )
+    .then((result) => result.json())
+    .then((response) => response.results);
+
+  imageData = result;
+  // console.log(result);
+  //   else {
+  imageData.map((data) => appendData(data));
+  imageData = [];
+}
 getImage();
