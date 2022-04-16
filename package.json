@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open-my-html": "open-cli ./index.html"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/bhaskarkrp/imgur/issues"
   },
-  "homepage": "https://github.com/bhaskarkrp/imgur#readme"
+  "homepage": "https://github.com/bhaskarkrp/imgur#readme",
+  "dependencies": {
+    "open-cli": "^7.0.1"
+  }
 }

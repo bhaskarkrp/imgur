@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Nav Bar */
+.top {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  background: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png");
+}
+.nav_bar {
+  display: flex;
+  width: 100%;
+  /* top: 0;
+  position: absolute; */
+  place-items: center;
+  gap: 20px;
+  place-content: space-around;
+  text-align: center;
+  position: sticky;
+  /* background-color: #181d44; */
+  padding: 8px 10px;
+  /* padding: 0 10px; */
+}
+.nav_left {
+  display: flex;
+  justify-content: center;
+  /* flex-grow: 0; */
+}
+.nav_center {
+  flex-grow: 4;
+}
+
+.logo_image {
+  height: 35px;
+  width: 100px;
+}
+
+.form_search {
+  width: 85%;
+  max-width: 530px;
+  display: inline-flex;
+  place-items: center;
+  background-color: #474469;
+  border-radius: 2px;
+}
+
+.submit_search {
+  padding-top: 4px;
+  background: transparent;
+  border: none;
+  /* position: relative;
+  right: 35px; */
+  height: 90%;
+}
+
+input[type="text"] {
+  height: 32px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0 8px;
+  outline: none;
+  color: white;
+  font-weight: 600;
+}
+
+input[type="text"]::placeholder {
+  color: #aeabbd;
+}
+
+input[type="text"]:active {
+  /* color: #aeabbd;
+     */
+  border: none;
+  color: #fff;
+}
+
+.nav_right {
+  display: inline-flex;
+  gap: 10px;
+  /* flex-grow: 0; */
+}
+
+.add_free {
+  background: #6d7cf9;
+  box-shadow: 0 3px 4px rgb(0 0 0 / 12%);
+  padding: 0 10px 0 9px;
+  overflow: hidden;
+  margin: auto 0;
+  /* line-height: 35px; */
+  color: white;
+}
+.sign_in {
+  background: transparent;
+  color: white;
+}
+.sign_up {
+  background-color: #3fb76f;
+  color: white;
+}
+.button {
+  text-align: center;
+  /* height: 35px; */
+  height: max-content;
+  display: inline-block;
+  padding: 7px 14px 10px 9px;
+  text-transform: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+.a_nav {
+  width: 100%;
+  height: 100%;
+  background-color: #3fb76f;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* text-and-flex */
+.text-and-flex {
+  text-align: center;
+}
+.heading {
+  color: #aed8ea;
+  font-size: 24px;
+  margin-top: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.container_categories {
+  width: 80%;
+  margin: auto;
+}
+.tags {
+  display: flex;
+  justify-content: space-between;
+}
+.tag_name {
+  color: #b9b8c7;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.3px;
+  /* text-align: left; */
+  text-transform: uppercase;
+}
+
+.categories {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+/* .categories :first-child {
+  flex-grow: 4;
+} */
+.box {
+  width: 110px;
+  height: 150px;
+  margin-right: 9px;
+  border: 1px solid black;
+}
+
+.second_top {
+  background-color: #2e3035;
+}
+.container_bottom {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  top: -80px;
+}
+.second_heading {
+  display: flex;
+  justify-content: space-between;
+}
+.right_filter {
+  display: flex;
+  gap: 20px;
+  place-items: center;
+}
+
+.imagesList {
+  column-count: 6;
+  margin-top: 1.2rem;
+}
+
+.innerDiv_name_div {
+  color: #fff;
+  padding-top: 1rem;
+  height: max-content;
+  background-color: #474a51;
+  margin-top: -4px;
+}
+.p_name {
+  padding-left: 8%;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.count_social {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(146, 142, 142);
+  padding: 12px 8px;
+}
+.div_icon {
+  display: flex;
+  place-content: center;
+  /* justify-content: space-between; */
+  gap: 4px;
+}
+
+#loading-State {
+  text-align: center;
+  color: #fff;
+}
+@media only screen and (max-width: 800px) {
+  .a_nav span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1550px) {
+  .imagesList {
+    column-count: 5;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .imagesList {
+    column-count: 4;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .imagesList {
+    column-count: 3;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .imagesList {
+    column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .imagesList {
+    column-count: 1;
+  }
+}

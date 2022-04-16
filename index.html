@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Imgur</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="first_half">
+        <!-- Navbar -->
+        <div class="top">
+          <div class="nav_bar">
+            <div class="nav_left">
+              <div style="display: inline-flex; gap: 20px; place-items: center">
+                <img
+                  class="logo_image"
+                  src="https://cdn.freebiesupply.com/images/large/2x/imgur-logo-white.png"
+                  alt=""
+                />
+                <a
+                  class="a_nav"
+                  href=""
+                  style="text-align: center; display: inline-flex; gap: 10px"
+                >
+                  <img
+                    style="margin: auto"
+                    src="https://s.imgur.com/desktop-assets/desktop-assets/icon-new-post.13ab64f9f36ad8f25ae3544b350e2ae1.svg"
+                    alt=""
+                  />
+
+                  <span style="margin: auto">New Post</span>
+                </a>
+              </div>
+            </div>
+            <div class="nav_center">
+              <!-- <div> -->
+              <form action="" class="form_search">
+                <input type="text" placeholder="Images, #tags oh my!" , />
+                <button type="submit" class="submit_search">
+                  <img
+                    src="https://s.imgur.com/desktop-assets/desktop-assets/icon-search.8d0f9b564a4659d48d8eca38b968a7f2.svg"
+                    alt=""
+                  />
+                </button>
+              </form>
+              <!-- </div> -->
+            </div>
+            <div class="nav_right">
+              <button class="add_free button">Go Ad-Free</button>
+              <button class="sign_in button">Sign In</button>
+              <button class="sign_up button">Sign Up</button>
+            </div>
+          </div>
+          <div class="text-and-flex">
+            <p class="heading">
+              Wait, it's all memes? Always has been. EXPLORE TAGS .
+            </p>
+
+            <div class="container_categories">
+              <div class="tags">
+                <p class="tag_name">EXPLORE TAGS</p>
+                <p class="tag_name">MORE TAGS +</p>
+              </div>
+              <div class="categories">
+                <div class="box" style="flex-grow: 0.4">></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="second_top">
+          <div class="container_bottom">
+            <div class="second_heading">
+              <div class="left_filter tag">
+                <p class="tag_name">most viral</p>
+              </div>
+              <div class="right_filter">
+                <p class="tag_name">Newest</p>
+                <a href="">
+                  <img
+                    src="https://s.imgur.com/desktop-assets/desktop-assets/icon-filter.551faed00bcf04e07c9e01a6874bd652.svg"
+                    alt=""
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="https://s.imgur.com/desktop-assets/desktop-assets/icon-pause.68f07ce1a7e07bac06d1f2c527d7a9e5.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="imagesList" id="image_list"></div>
+            <div id="loading-State">
+              <h2>Loading.....</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="second_h alf"></div> -->
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
