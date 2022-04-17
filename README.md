@@ -2,6 +2,8 @@
 
 <h3>Imgur is an American online image sharing platform.</h3>
 
+<a src="https://bhaskarkrp.github.io/imgur/">Demo 😉</a>
+
 ## Features
 <p>1. Functional Search bar.</p>
 <p>2. Infinte Scroll.</p>
