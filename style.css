@@ -160,6 +160,7 @@ input[type="text"]:active {
   margin-top: 12px;
   font-weight: 700;
   letter-spacing: 0.6px;
+  margin-bottom: 20px;
 }
 
 .container_categories {
@@ -189,7 +190,7 @@ input[type="text"]:active {
 
 .box {
   width: 110px;
-  height: 150px;
+  height: 120px;
   margin-right: 9px;
   /* border: 1px solid black; */
   top: 0;
@@ -233,6 +234,9 @@ input[type="text"]:active {
 }
 
 .image-box-div {
+  width: 200px;
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 16%);
+  margin-bottom: 15px;
   top: 0;
   transition: top 300ms ease;
 }
@@ -312,5 +316,19 @@ input[type="text"]:active {
 @media only screen and (max-width: 520px) {
   .imagesList {
     column-count: 1;
+    /* width: 100%; */
+  }
+  .image-box-div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .nav_right {
+    display: none;
+  }
+  .box-small-div {
+    height: 60px;
+  }
+  .box {
+    height: 110px;
   }
 }

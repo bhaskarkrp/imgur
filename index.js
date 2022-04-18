@@ -38,9 +38,9 @@ if (imageData.length === 0) {
 function appendData(data) {
   let div = document.createElement("div");
   //   div.style.height = "100%";
-  div.style.width = "200px";
-  div.style.boxShadow = "0 8px 16px 0 rgb(0 0 0 / 16%)";
-  div.style.marginBottom = "15px";
+  // div.style.width = "200px";
+  // div.style.boxShadow = "0 8px 16px 0 rgb(0 0 0 / 16%)";
+  // div.style.marginBottom = "15px";
   div.className = "image-box-div";
 
   let image = document.createElement("img");
